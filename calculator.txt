@@ -1,0 +1,42 @@
+import math
+
+def Addition(x, y):
+    return x + y
+
+def Subtraction(x, y):
+    return x - y
+
+def Multiplication(x, y):
+    return x * y
+
+def Division(x, y):
+    if y == 0:
+        return "Error: Division by zero"
+    return x / y
+
+def Power(x, y):
+    return x ** y
+
+def SquareRoot(x):
+    return math.sqrt(x)
+
+print("Simple Calculator\n")
+
+while True:
+    num1 = float(input("Enter First No. : "))
+    Operator = input("Enter Operator {+ , - , * , / , sqrt}: ")
+
+    if Operator in ('+', '-', '*', '/'):
+        num2 = float(input("Enter Second No. : "))
+        if Operator == '+':
+            print("Result:", Addition(num1, num2), "\n" )
+        elif Operator == '-':
+            print("Result:", Subtraction(num1, num2) , "\n")
+        elif Operator == '*':
+            print("Result:", Multiplication(num1, num2) , "\n")
+        elif Operator == '/':
+            print("Result:", Division(num1, num2) , "\n")
+    elif Operator == 'sqrt':
+        print("Result:", SquareRoot(num1) , "\n")
+    else:
+        print("Invalid Operator" , "\n")
